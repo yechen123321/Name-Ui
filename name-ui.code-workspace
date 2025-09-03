@@ -1,0 +1,46 @@
+{
+  "folders": [
+    {
+      "name": "Root",
+      "path": "."
+    },
+    {
+      "name": "Core",
+      "path": "./packages/core"
+    },
+    {
+      "name": "Vue",
+      "path": "./packages/vue"
+    },
+    {
+      "name": "React",
+      "path": "./packages/react"
+    },
+    {
+      "name": "Theme",
+      "path": "./packages/theme"
+    }
+  ],
+  "settings": {
+    "typescript.preferences.includePackageJsonAutoImports": "on",
+    "typescript.suggest.autoImports": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    },
+    "eslint.workingDirectories": [
+      "packages/core",
+      "packages/vue", 
+      "packages/react",
+      "examples/vue-example",
+      "examples/react-example"
+    ]
+  },
+  "extensions": {
+    "recommendations": [
+      "Vue.volar",
+      "bradlc.vscode-tailwindcss",
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint"
+    ]
+  }
+}

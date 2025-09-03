@@ -1,0 +1,47 @@
+{
+  "name": "name-ui",
+  "version": "1.0.0",
+  "description": "Universal UI Component Library for Vue and React",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "pnpm -r --filter=\"./packages/*\" run build",
+    "build:core": "pnpm --filter=\"@name-ui/core\" run build",
+    "build:vue": "pnpm --filter=\"@name-ui/vue\" run build",
+    "build:react": "pnpm --filter=\"@name-ui/react\" run build",
+    "dev": "pnpm -r --parallel run dev",
+    "dev:core": "pnpm --filter=\"@name-ui/core\" run dev",
+    "dev:vue": "pnpm --filter=\"@name-ui/vue\" run dev",
+    "dev:react": "pnpm --filter=\"@name-ui/react\" run dev",
+    "lint": "eslint packages --ext .ts,.tsx,.vue --fix",
+    "type-check": "pnpm -r --parallel run type-check",
+    "test": "vitest",
+    "clean": "pnpm -r run clean && if exist node_modules rmdir /s /q node_modules",
+    "release": "pnpm build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.0",
+    "jsdom": "^26.1.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.12",
+    "vitest": "^1.2.2"
+  },
+  "keywords": [
+    "ui",
+    "components",
+    "vue",
+    "react",
+    "universal",
+    "cross-framework"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "packageManager": "pnpm@8.15.1"
+}

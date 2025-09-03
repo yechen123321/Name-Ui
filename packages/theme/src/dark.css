@@ -1,0 +1,36 @@
+/* 暗色主题变量 */
+:root[data-theme="dark"],
+.dark {
+  /* 颜色变量 */
+  --n-color-primary: #177ddc;
+  --n-color-primary-hover: #3291db;
+  --n-color-primary-active: #0958d9;
+  --n-color-secondary: #5c6b77;
+  --n-color-success: #49aa19;
+  --n-color-warning: #d89614;
+  --n-color-danger: #dc4446;
+  --n-color-info: #13a8a8;
+  --n-color-light: #2f3349;
+  --n-color-dark: #f0f0f0;
+
+  /* 文字颜色 */
+  --n-text-color: rgba(255, 255, 255, 0.85);
+  --n-text-color-secondary: rgba(255, 255, 255, 0.65);
+  --n-text-color-disabled: rgba(255, 255, 255, 0.25);
+
+  /* 背景颜色 */
+  --n-bg-color: #141414;
+  --n-bg-color-secondary: #1f1f1f;
+  --n-bg-color-disabled: #262626;
+
+  /* 边框颜色 */
+  --n-border-color: #424242;
+  --n-border-color-hover: #177ddc;
+  --n-border-color-focus: #177ddc;
+
+  /* 阴影 */
+  --n-box-shadow-small: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --n-box-shadow-medium: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --n-box-shadow-large: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --n-box-shadow-focus: 0 0 0 2px rgba(23, 125, 220, 0.2);
+}

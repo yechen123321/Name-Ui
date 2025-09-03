@@ -1,0 +1,9 @@
+packages:
+  - 'packages/*'
+  - 'examples/*'
+  - 'playground/*'
+
+# 共享配置
+shared-workspace-lockfile: true
+link-workspace-packages: true
+prefer-workspace-packages: true

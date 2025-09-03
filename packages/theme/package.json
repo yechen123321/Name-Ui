@@ -1,0 +1,36 @@
+{
+  "name": "@name-ui/theme",
+  "version": "1.0.0",
+  "description": "Theme and styles for Name-UI",
+  "type": "module",
+  "main": "./dist/index.css",
+  "exports": {
+    ".": {
+      "import": "./dist/index.css"
+    },
+    "./dark": {
+      "import": "./dist/dark.css"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "clean": "if exist dist rmdir /s /q dist"
+  },
+  "devDependencies": {
+    "vite": "^5.0.12"
+  },
+  "keywords": [
+    "ui",
+    "theme",
+    "css",
+    "styles"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}
