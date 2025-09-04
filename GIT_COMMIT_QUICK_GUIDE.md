@@ -16,17 +16,17 @@ npm run commit
 
 ## 🏷️ 提交类型
 
-| 类型       | 用途    | 示例                     |
-| ---------- | ------- | ------------------------ |
-| `feat`     | 新功能  | `feat: 添加按钮组件`     |
-| `fix`      | 修复bug | `fix: 修复样式问题`      |
-| `docs`     | 文档    | `docs: 更新README`       |
-| `style`    | 格式    | `style: 代码格式化`      |
-| `refactor` | 重构    | `refactor: 优化代码结构` |
-| `perf`     | 性能    | `perf: 提升渲染性能`     |
-| `test`     | 测试    | `test: 添加单元测试`     |
-| `chore`    | 杂项    | `chore: 更新配置`        |
-| `update`   | 更新    | `update: 升级依赖`       |
+| 类型       | 用途     | 示例                     |
+| ---------- | -------- | ------------------------ |
+| `feat`     | 新功能   | `feat: 添加按钮组件`     |
+| `fix`      | 修复 bug | `fix: 修复样式问题`      |
+| `docs`     | 文档     | `docs: 更新README`       |
+| `style`    | 格式     | `style: 代码格式化`      |
+| `refactor` | 重构     | `refactor: 优化代码结构` |
+| `perf`     | 性能     | `perf: 提升渲染性能`     |
+| `test`     | 测试     | `test: 添加单元测试`     |
+| `chore`    | 杂项     | `chore: 更新配置`        |
+| `update`   | 更新     | `update: 升级依赖`       |
 
 ## ✅ 正确示例
 
@@ -76,16 +76,16 @@ pnpm build
 
 ## 🚨 常见问题解决
 
-### Prettier格式化错误
+### Prettier 格式化错误
 
-如果遇到Prettier无法格式化的错误：
+如果遇到 Prettier 无法格式化的错误：
 
 ```bash
 # 检查是否有缓存文件被格式化
 # 解决方案：查看 docs/PRETTIER_CONFIG_FIX.md
 ```
 
-### Git提交钩子失败
+### Git 提交钩子失败
 
 如果提交时钩子失败：
 
@@ -100,21 +100,21 @@ git commit -m "fix: 描述问题"
 
 ### 模块加载错误
 
-如果遇到commitlint模块错误：
+如果遇到 commitlint 模块错误：
 
 - 确保使用 `commitlint.config.cjs` 而不是 `.js`
 - 检查配置文件格式是否正确
 
 ## 📚 相关文档
 
-- `docs/PRETTIER_CONFIG_FIX.md` - Prettier配置问题解决方案
-- `docs/VUE_TYPESCRIPT_CONFIG.md` - Vue TypeScript配置
-- `docs/VITE_PLUGIN_TYPE_FIX.md` - Vite插件类型问题
+- `docs/PRETTIER_CONFIG_FIX.md` - Prettier 配置问题解决方案
+- `docs/VUE_TYPESCRIPT_CONFIG.md` - Vue TypeScript 配置
+- `docs/VITE_PLUGIN_TYPE_FIX.md` - Vite 插件类型问题
 
 ## 📋 提交检查清单
 
 - [ ] 使用正确的提交类型
-- [ ] 描述清晰简洁（5-50字符）
+- [ ] 描述清晰简洁（5-50 字符）
 - [ ] 冒号后有空格
 - [ ] 使用中文描述
 - [ ] 不以句号结尾

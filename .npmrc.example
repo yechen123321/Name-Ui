@@ -1,0 +1,12 @@
+# npm 配置文件示例
+# 复制此文件为 .npmrc 并添加你的实际 token
+
+# npm registry 配置
+registry=https://registry.npmjs.org/
+
+# npm token 配置（请替换为你的实际 token）
+# //registry.npmjs.org/:_authToken=your_npm_token_here
+
+# 其他配置选项
+save-exact=true
+engine-strict=true

@@ -49,8 +49,8 @@ const inputCore = computed(() => {
       props.modelValue !== undefined
         ? props.modelValue
         : props.value !== undefined
-          ? props.value
-          : internalValue.value,
+        ? props.value
+        : internalValue.value,
     onChange: (value: string, event: Event) => {
       if (props.modelValue === undefined && props.value === undefined) {
         internalValue.value = value

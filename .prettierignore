@@ -1,0 +1,41 @@
+# 构建产物
+dist/
+build/
+lib/
+
+# 缓存文件
+node_modules/
+.cache/
+*.cache/
+**/cache/**
+
+# VitePress 缓存
+packages/docs/.vitepress/cache/
+packages/docs/.vitepress/dist/
+.vitepress/cache/
+.vitepress/dist/
+
+# 依赖文件
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# 日志文件
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# IDE 文件
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 临时文件
+*.tmp
+*.temp
