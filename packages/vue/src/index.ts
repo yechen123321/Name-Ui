@@ -6,9 +6,9 @@ const components = [NButton, NInput]
 
 // 安装函数
 const install = (app: App): void => {
-  components.forEach(component => {
-    app.component(component.name || component.__name, component)
-  })
+  // 手动指定组件名称，确保类型安全
+  app.component('NButton', NButton)
+  app.component('NInput', NInput)
 }
 
 // Vue 插件
