@@ -1,9 +1,6 @@
 import type { App } from 'vue'
 import { NButton, NInput } from './components'
 
-// 所有组件
-const components = [NButton, NInput]
-
 // 安装函数
 const install = (app: App): void => {
   // 手动指定组件名称，确保类型安全
