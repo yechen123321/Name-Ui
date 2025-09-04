@@ -9,7 +9,7 @@ module.exports = {
     'eslint:recommended',
     '@typescript-eslint/recommended',
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs', 'node_modules', '**/.vitepress/cache/**'],
+  ignorePatterns: ['dist', '.eslintrc.cjs', 'node_modules', '**/.vitepress/cache/**', '*.config.js', '*.config.cjs', '.cz-config.js'],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   rules: {
