@@ -132,6 +132,29 @@ style: 格式化代码，修复ESLint警告
 
 📖 详细规范请查看：[Git 提交规范指南](./docs/GIT_COMMIT_GUIDE.md) | [快速参考](./GIT_COMMIT_QUICK_GUIDE.md)
 
+## 📚 开发文档
+
+### 配置指南
+
+- [开发环境配置](./docs/DEVELOPMENT_SETUP.md) - 完整的开发环境配置指南
+- [Prettier 配置修复](./docs/PRETTIER_CONFIG_FIX.md) - 代码格式化工具配置问题解决
+- [Vue TypeScript 配置](./docs/VUE_TYPESCRIPT_CONFIG.md) - Vue 包的 TypeScript 配置
+- [Vite 插件类型修复](./docs/VITE_PLUGIN_TYPE_FIX.md) - Vite 插件类型冲突问题
+
+### 开发指南
+
+- [Git 提交快速参考](./GIT_COMMIT_QUICK_GUIDE.md) - 提交规范快速查询
+- [VitePress 文档](http://localhost:5173/) - 组件文档和 API 参考（开发环境）
+
+### 常见问题
+
+如果在开发过程中遇到配置问题，请优先查看对应的文档：
+
+- 代码格式化问题 → `docs/PRETTIER_CONFIG_FIX.md`
+- TypeScript 类型问题 → `docs/VUE_TYPESCRIPT_CONFIG.md`
+- Vite 构建问题 → `docs/VITE_PLUGIN_TYPE_FIX.md`
+- Git 提交问题 → `GIT_COMMIT_QUICK_GUIDE.md`
+
 ## 许可证
 
 MIT
