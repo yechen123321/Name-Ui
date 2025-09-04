@@ -20,7 +20,11 @@
     "type-check": "pnpm -r --parallel run type-check",
     "test": "vitest",
     "clean": "pnpm -r run clean && if exist node_modules rmdir /s /q node_modules",
-    "release": "pnpm build && changeset publish"
+    "release": "pnpm build && changeset publish",
+    "commit": "git-cz",
+    "prepare": "husky install",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,vue,md,json}\"",
+    "lint:commit": "commitlint --from=HEAD~1"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
@@ -43,5 +47,24 @@
   ],
   "author": "Your Name",
   "license": "MIT",
-  "packageManager": "pnpm@8.15.1"
+  "packageManager": "pnpm@8.15.1",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.vue": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{js,jsx,ts,tsx,vue,md,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
 }

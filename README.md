@@ -33,7 +33,7 @@ examples/
 # Vue 项目
 npm install @name-ui/vue
 
-# React 项目  
+# React 项目
 npm install @name-ui/react
 ```
 
@@ -43,9 +43,7 @@ npm install @name-ui/react
 
 ```vue
 <template>
-  <n-button type="primary" @click="handleClick">
-    点击我
-  </n-button>
+  <n-button type="primary" @click="handleClick"> 点击我 </n-button>
 </template>
 
 <script setup>
@@ -68,7 +66,7 @@ function App() {
   }
 
   return (
-    <Button type="primary" onClick={handleClick}>
+    <Button type='primary' onClick={handleClick}>
       点击我
     </Button>
   )
@@ -90,6 +88,49 @@ pnpm build
 # 运行测试
 pnpm test
 ```
+
+## Git 提交规范
+
+本项目采用严格的 Git 提交信息规范，基于 [Conventional Commits](https://www.conventionalcommits.org/) 标准。
+
+### 快速使用
+
+```bash
+# 推荐：使用交互式提交
+npm run commit
+
+# 或手动提交（需遵循格式）
+git commit -m "feat: 添加新功能"
+```
+
+### 提交格式
+
+```
+<type>: <description>
+```
+
+**提交类型：**
+
+- `feat`: 新功能
+- `fix`: 修复 bug
+- `docs`: 文档更新
+- `style`: 代码格式
+- `refactor`: 重构
+- `perf`: 性能优化
+- `test`: 测试
+- `chore`: 杂项
+- `update`: 更新依赖
+
+**示例：**
+
+```bash
+feat: 添加按钮组件的loading状态
+fix: 修复输入框在移动端的显示问题
+docs: 更新组件API文档
+style: 格式化代码，修复ESLint警告
+```
+
+📖 详细规范请查看：[Git 提交规范指南](./docs/GIT_COMMIT_GUIDE.md) | [快速参考](./GIT_COMMIT_QUICK_GUIDE.md)
 
 ## 许可证
 
