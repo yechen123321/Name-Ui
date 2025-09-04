@@ -16,6 +16,7 @@
     "dev:core": "pnpm --filter=\"@name-ui/core\" run dev",
     "dev:vue": "pnpm --filter=\"@name-ui/vue\" run dev",
     "dev:react": "pnpm --filter=\"@name-ui/react\" run dev",
+    "dev:docs": "pnpm --filter=\"@name-ui/docs\" run dev",
     "lint": "eslint packages --ext .ts,.tsx,.vue --fix",
     "type-check": "pnpm -r --parallel run type-check",
     "test": "vitest",

@@ -1,0 +1,22 @@
+{
+  "name": "@name-ui/docs",
+  "version": "1.0.0",
+  "description": "Name-UI Documentation",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
+    "clean": "if exist .vitepress/dist rmdir /s /q .vitepress/dist"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0"
+  },
+  "keywords": [
+    "documentation",
+    "vitepress",
+    "ui-components"
+  ],
+  "license": "MIT"
+}
