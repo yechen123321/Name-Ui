@@ -2,19 +2,31 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "outDir": "./dist",
-    "rootDir": "./src",
     "declaration": true,
     "declarationMap": true,
     "emitDeclarationOnly": false,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "moduleResolution": "bundler",
+    "types": ["vite/client"],
+    "baseUrl": ".",
+    "paths": {
+      "@name-ui/core": ["../core/src"],
+      "@/*": ["./src/*"]
+    }
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "../core/src/**/*",
+    "src/vue-env.d.ts",
+    "src/shims-vue.d.ts"
   ],
   "exclude": [
     "dist",
     "node_modules",
     "**/*.test.*",
     "**/*.spec.*"
-  ]
+  ],
+  "vueCompilerOptions": {
+    "target": 3
+  }
 }
