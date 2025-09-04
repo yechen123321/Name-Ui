@@ -24,7 +24,7 @@ const props = withDefaults(defineProps<Props>(), {
   type: 'text',
   size: 'medium',
   disabled: false,
-  readonly: false
+  readonly: false,
 })
 
 // 定义事件
@@ -37,13 +37,20 @@ const emit = defineEmits<{
 }>()
 
 // 内部值状态
-const internalValue = ref(props.modelValue || props.value || props.defaultValue || '')
+const internalValue = ref(
+  props.modelValue || props.value || props.defaultValue || ''
+)
 
 // 创建输入框核心逻辑实例
 const inputCore = computed(() => {
   const coreProps = {
     ...props,
-    value: props.modelValue !== undefined ? props.modelValue : (props.value !== undefined ? props.value : internalValue.value),
+    value:
+      props.modelValue !== undefined
+        ? props.modelValue
+        : props.value !== undefined
+          ? props.value
+          : internalValue.value,
     onChange: (value: string, event: Event) => {
       if (props.modelValue === undefined && props.value === undefined) {
         internalValue.value = value
@@ -52,33 +59,39 @@ const inputCore = computed(() => {
       emit('change', value, event)
     },
     onFocus: (event: Event) => emit('focus', event),
-    onBlur: (event: Event) => emit('blur', event)
+    onBlur: (event: Event) => emit('blur', event),
   }
   return new InputCore(coreProps)
 })
 
 // 监听外部值变化
-watch(() => props.modelValue, (newValue) => {
-  if (newValue !== undefined) {
-    internalValue.value = newValue
+watch(
+  () => props.modelValue,
+  newValue => {
+    if (newValue !== undefined) {
+      internalValue.value = newValue
+    }
   }
-})
+)
 
-watch(() => props.value, (newValue) => {
-  if (newValue !== undefined) {
-    internalValue.value = newValue
+watch(
+  () => props.value,
+  newValue => {
+    if (newValue !== undefined) {
+      internalValue.value = newValue
+    }
   }
-})
+)
 
 // 处理输入事件
 const handleInput = (event: Event) => {
   const target = event.target as HTMLInputElement
   const value = target.value
-  
+
   if (props.modelValue === undefined && props.value === undefined) {
     internalValue.value = value
   }
-  
+
   emit('update:modelValue', value)
   emit('input', value, event)
 }

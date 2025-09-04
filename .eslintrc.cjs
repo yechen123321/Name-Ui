@@ -9,26 +9,12 @@ module.exports = {
     'eslint:recommended',
     '@typescript-eslint/recommended',
   ],
+  ignorePatterns: ['dist', '.eslintrc.cjs', 'node_modules', '**/.vitepress/cache/**'],
   parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
   plugins: ['@typescript-eslint'],
   rules: {
-    '@typescript-eslint/no-unused-vars': 'warn',
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     '@typescript-eslint/no-explicit-any': 'warn',
-    'prefer-const': 'warn',
-    'no-console': 'warn',
+    '@typescript-eslint/no-non-null-assertion': 'warn',
   },
-  ignorePatterns: [
-    'dist',
-    'build',
-    'node_modules',
-    '*.config.js',
-    '*.config.ts',
-  ],
-};
+}

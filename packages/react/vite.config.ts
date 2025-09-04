@@ -9,7 +9,7 @@ export default defineConfig({
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'NameUIReact',
       fileName: 'index',
-      formats: ['es']
+      formats: ['es'],
     },
     rollupOptions: {
       external: ['react', 'react-dom', '@name-ui/core'],
@@ -17,16 +17,16 @@ export default defineConfig({
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
-          '@name-ui/core': 'NameUICore'
-        }
-      }
+          '@name-ui/core': 'NameUICore',
+        },
+      },
     },
     sourcemap: true,
-    minify: false
+    minify: false,
   },
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src')
-    }
-  }
+      '@': resolve(__dirname, 'src'),
+    },
+  },
 })

@@ -43,7 +43,7 @@ const props = withDefaults(defineProps<Props>(), {
   size: 'medium',
   disabled: false,
   loading: false,
-  block: false
+  block: false,
 })
 
 // 定义事件

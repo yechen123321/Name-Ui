@@ -7,33 +7,33 @@ export default defineConfig({
     vue({
       script: {
         defineModel: true,
-        propsDestructure: true
-      }
-    })
+        propsDestructure: true,
+      },
+    }),
   ],
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'NameUIVue',
       fileName: 'index',
-      formats: ['es']
+      formats: ['es'],
     },
     rollupOptions: {
       external: ['vue', '@name-ui/core'],
       output: {
         globals: {
           vue: 'Vue',
-          '@name-ui/core': 'NameUICore'
-        }
-      }
+          '@name-ui/core': 'NameUICore',
+        },
+      },
     },
     sourcemap: true,
-    minify: false
+    minify: false,
   },
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
-      '@name-ui/core': resolve(__dirname, '../core/src')
-    }
-  }
+      '@name-ui/core': resolve(__dirname, '../core/src'),
+    },
+  },
 })

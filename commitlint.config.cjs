@@ -1,3 +1,4 @@
+/** @type {import('@commitlint/types').UserConfig} */
 module.exports = {
   extends: ['@commitlint/config-conventional'],
   rules: {
@@ -6,18 +7,18 @@ module.exports = {
       2,
       'always',
       [
-        'feat',     // 新功能
-        'fix',      // 修复 bug
-        'docs',     // 文档更新
-        'style',    // 代码格式（不影响代码运行的变动）
+        'feat', // 新功能
+        'fix', // 修复 bug
+        'docs', // 文档更新
+        'style', // 代码格式（不影响代码运行的变动）
         'refactor', // 重构（既不是新增功能，也不是修改bug的代码变动）
-        'perf',     // 性能优化
-        'test',     // 增加测试
-        'chore',    // 构建过程或辅助工具的变动
-        'revert',   // 回退
-        'build',    // 构建系统或外部依赖项的更改
-        'ci',       // CI 配置文件和脚本的更改
-        'update',   // 更新依赖或配置
+        'perf', // 性能优化
+        'test', // 增加测试
+        'chore', // 构建过程或辅助工具的变动
+        'revert', // 回退
+        'build', // 构建系统或外部依赖项的更改
+        'ci', // CI 配置文件和脚本的更改
+        'update', // 更新依赖或配置
       ],
     ],
     // 提交类型不能为空
