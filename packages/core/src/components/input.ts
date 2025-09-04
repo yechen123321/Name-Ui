@@ -22,7 +22,7 @@ export class InputCore {
     const componentClass = createComponentClass('input', {
       size,
       disabled,
-      readonly
+      readonly,
     })
 
     return className ? `${componentClass} ${className}` : componentClass
@@ -40,13 +40,13 @@ export class InputCore {
    * 获取输入框的属性
    */
   getAttributes(): Record<string, any> {
-    const { 
-      id, 
-      testId, 
-      type = 'text', 
-      placeholder, 
-      disabled, 
-      readonly 
+    const {
+      id,
+      testId,
+      type = 'text',
+      placeholder,
+      disabled,
+      readonly,
     } = this.props
 
     return {
@@ -57,7 +57,7 @@ export class InputCore {
       disabled,
       readonly,
       value: this.getValue(),
-      'aria-disabled': disabled
+      'aria-disabled': disabled,
     }
   }
 

@@ -15,14 +15,21 @@ export class ButtonCore {
    * 获取按钮的 CSS 类名
    */
   getClassName(): string {
-    const { type = 'default', size = 'medium', disabled, loading, block, className } = this.props
+    const {
+      type = 'default',
+      size = 'medium',
+      disabled,
+      loading,
+      block,
+      className,
+    } = this.props
 
     const componentClass = createComponentClass('button', {
       type,
       size,
       disabled: disabled || loading,
       loading,
-      block
+      block,
     })
 
     return className ? `${componentClass} ${className}` : componentClass
@@ -46,7 +53,7 @@ export class ButtonCore {
       ...(id && { id }),
       ...(testId && { 'data-testid': testId }),
       disabled: disabled || loading,
-      'aria-disabled': disabled || loading
+      'aria-disabled': disabled || loading,
     }
   }
 
@@ -84,7 +91,7 @@ export class ButtonCore {
     // 这里返回一个加载状态的标识，具体的渲染由框架适配器处理
     return {
       type: 'loading',
-      content: this.props.children
+      content: this.props.children,
     }
   }
 

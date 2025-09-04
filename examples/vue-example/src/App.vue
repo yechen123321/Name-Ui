@@ -118,7 +118,10 @@ const toggleLoading = () => {
 // 切换主题
 const toggleTheme = () => {
   isDark.value = !isDark.value
-  document.documentElement.setAttribute('data-theme', isDark.value ? 'dark' : 'light')
+  document.documentElement.setAttribute(
+    'data-theme',
+    isDark.value ? 'dark' : 'light'
+  )
 }
 </script>
 

@@ -3,11 +3,10 @@
  * @param classes - 类名数组
  * @returns 合并后的类名字符串
  */
-export function classNames(...classes: (string | undefined | null | false)[]): string {
-  return classes
-    .filter(Boolean)
-    .join(' ')
-    .trim()
+export function classNames(
+  ...classes: (string | undefined | null | false)[]
+): string {
+  return classes.filter(Boolean).join(' ').trim()
 }
 
 /**
@@ -38,7 +37,9 @@ export function createComponentClass(
  * @param styles - 样式对象数组
  * @returns 合并后的样式对象
  */
-export function mergeStyles(...styles: (Record<string, any> | undefined)[]): Record<string, any> {
+export function mergeStyles(
+  ...styles: (Record<string, any> | undefined)[]
+): Record<string, any> {
   return styles.reduce<Record<string, any>>((merged, style) => {
     if (style) {
       return { ...merged, ...style }

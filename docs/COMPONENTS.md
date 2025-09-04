@@ -3,11 +3,13 @@
 ## 安装
 
 ### Vue 项目
+
 ```bash
 npm install @name-ui/vue @name-ui/theme
 ```
 
 ### React 项目
+
 ```bash
 npm install @name-ui/react @name-ui/theme
 ```
@@ -17,6 +19,7 @@ npm install @name-ui/react @name-ui/theme
 ### Vue 使用方式
 
 #### 全局注册
+
 ```typescript
 // main.ts
 import { createApp } from 'vue'
@@ -28,11 +31,10 @@ app.use(NameUI)
 ```
 
 #### 按需引入
+
 ```vue
 <template>
-  <n-button type="primary" @click="handleClick">
-    点击我
-  </n-button>
+  <n-button type="primary" @click="handleClick"> 点击我 </n-button>
   <n-input v-model:value="inputValue" placeholder="请输入" />
 </template>
 
@@ -56,21 +58,17 @@ import '@name-ui/theme'
 
 function App() {
   const [inputValue, setInputValue] = useState('')
-  
+
   const handleClick = () => {
     console.log('按钮被点击')
   }
 
   return (
     <div>
-      <Button type="primary" onClick={handleClick}>
+      <Button type='primary' onClick={handleClick}>
         点击我
       </Button>
-      <Input 
-        value={inputValue} 
-        onChange={setInputValue} 
-        placeholder="请输入" 
-      />
+      <Input value={inputValue} onChange={setInputValue} placeholder='请输入' />
     </div>
   )
 }
@@ -82,19 +80,19 @@ function App() {
 
 #### 属性
 
-| 属性 | 类型 | 默认值 | 说明 |
-|------|------|--------|------|
-| type | `'default' \| 'primary' \| 'secondary' \| 'success' \| 'warning' \| 'danger'` | `'default'` | 按钮类型 |
-| size | `'small' \| 'medium' \| 'large'` | `'medium'` | 按钮尺寸 |
-| disabled | `boolean` | `false` | 是否禁用 |
-| loading | `boolean` | `false` | 是否加载中 |
-| block | `boolean` | `false` | 是否块级元素 |
+| 属性     | 类型                                                                          | 默认值      | 说明         |
+| -------- | ----------------------------------------------------------------------------- | ----------- | ------------ |
+| type     | `'default' \| 'primary' \| 'secondary' \| 'success' \| 'warning' \| 'danger'` | `'default'` | 按钮类型     |
+| size     | `'small' \| 'medium' \| 'large'`                                              | `'medium'`  | 按钮尺寸     |
+| disabled | `boolean`                                                                     | `false`     | 是否禁用     |
+| loading  | `boolean`                                                                     | `false`     | 是否加载中   |
+| block    | `boolean`                                                                     | `false`     | 是否块级元素 |
 
 #### 事件
 
-| 事件名 | 说明 | 回调参数 |
-|--------|------|----------|
-| click | 点击事件 | `(event: Event) => void` |
+| 事件名 | 说明     | 回调参数                 |
+| ------ | -------- | ------------------------ |
+| click  | 点击事件 | `(event: Event) => void` |
 
 #### 示例
 
@@ -107,7 +105,7 @@ function App() {
 
 ```tsx
 /* React */
-<Button type="primary" size="large" onClick={handleClick}>
+<Button type='primary' size='large' onClick={handleClick}>
   主要按钮
 </Button>
 ```
@@ -116,31 +114,31 @@ function App() {
 
 #### 属性
 
-| 属性 | 类型 | 默认值 | 说明 |
-|------|------|--------|------|
-| type | `'text' \| 'password' \| 'email' \| 'number' \| 'tel' \| 'url'` | `'text'` | 输入框类型 |
-| size | `'small' \| 'medium' \| 'large'` | `'medium'` | 输入框尺寸 |
-| placeholder | `string` | - | 占位文本 |
-| disabled | `boolean` | `false` | 是否禁用 |
-| readonly | `boolean` | `false` | 是否只读 |
-| value | `string` | - | 输入框值（受控） |
-| defaultValue | `string` | - | 默认值（非受控） |
+| 属性         | 类型                                                            | 默认值     | 说明             |
+| ------------ | --------------------------------------------------------------- | ---------- | ---------------- |
+| type         | `'text' \| 'password' \| 'email' \| 'number' \| 'tel' \| 'url'` | `'text'`   | 输入框类型       |
+| size         | `'small' \| 'medium' \| 'large'`                                | `'medium'` | 输入框尺寸       |
+| placeholder  | `string`                                                        | -          | 占位文本         |
+| disabled     | `boolean`                                                       | `false`    | 是否禁用         |
+| readonly     | `boolean`                                                       | `false`    | 是否只读         |
+| value        | `string`                                                        | -          | 输入框值（受控） |
+| defaultValue | `string`                                                        | -          | 默认值（非受控） |
 
 #### 事件
 
-| 事件名 | 说明 | 回调参数 |
-|--------|------|----------|
-| change | 值变化事件 | `(value: string, event: Event) => void` |
-| focus | 获得焦点事件 | `(event: Event) => void` |
-| blur | 失去焦点事件 | `(event: Event) => void` |
+| 事件名 | 说明         | 回调参数                                |
+| ------ | ------------ | --------------------------------------- |
+| change | 值变化事件   | `(value: string, event: Event) => void` |
+| focus  | 获得焦点事件 | `(event: Event) => void`                |
+| blur   | 失去焦点事件 | `(event: Event) => void`                |
 
 #### 示例
 
 ```vue
 <!-- Vue -->
-<n-input 
+<n-input
   v-model:value="inputValue"
-  type="email" 
+  type="email"
   placeholder="请输入邮箱"
   @change="handleChange"
 />
@@ -148,11 +146,11 @@ function App() {
 
 ```tsx
 /* React */
-<Input 
+<Input
   value={inputValue}
   onChange={setInputValue}
-  type="email" 
-  placeholder="请输入邮箱"
+  type='email'
+  placeholder='请输入邮箱'
 />
 ```
 

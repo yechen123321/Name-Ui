@@ -28,20 +28,20 @@ update: 升级 Vue 到 3.4 版本
 
 ## 提交类型 (type)
 
-| 类型 | 说明 | 示例 |
-|------|------|------|
-| `feat` | 新功能 | `feat: 添加 DatePicker 组件` |
-| `fix` | 修复 bug | `fix: 修复按钮在 Safari 下的样式问题` |
-| `docs` | 文档更新 | `docs: 完善组件 API 文档` |
-| `style` | 代码格式（不影响功能） | `style: 统一代码缩进格式` |
-| `refactor` | 重构（既不是新功能也不是修复） | `refactor: 重构工具函数模块` |
-| `perf` | 性能优化 | `perf: 优化虚拟滚动性能` |
-| `test` | 测试相关 | `test: 添加表单验证测试用例` |
-| `build` | 构建系统或依赖变更 | `build: 配置 Vite 打包优化` |
-| `ci` | CI 配置变更 | `ci: 添加自动化测试流程` |
-| `chore` | 其他杂项 | `chore: 清理无用的依赖包` |
-| `revert` | 回退提交 | `revert: 回退错误的组件更新` |
-| `update` | 更新依赖或配置 | `update: 升级 TypeScript 到 5.0` |
+| 类型       | 说明                           | 示例                                  |
+| ---------- | ------------------------------ | ------------------------------------- |
+| `feat`     | 新功能                         | `feat: 添加 DatePicker 组件`          |
+| `fix`      | 修复 bug                       | `fix: 修复按钮在 Safari 下的样式问题` |
+| `docs`     | 文档更新                       | `docs: 完善组件 API 文档`             |
+| `style`    | 代码格式（不影响功能）         | `style: 统一代码缩进格式`             |
+| `refactor` | 重构（既不是新功能也不是修复） | `refactor: 重构工具函数模块`          |
+| `perf`     | 性能优化                       | `perf: 优化虚拟滚动性能`              |
+| `test`     | 测试相关                       | `test: 添加表单验证测试用例`          |
+| `build`    | 构建系统或依赖变更             | `build: 配置 Vite 打包优化`           |
+| `ci`       | CI 配置变更                    | `ci: 添加自动化测试流程`              |
+| `chore`    | 其他杂项                       | `chore: 清理无用的依赖包`             |
+| `revert`   | 回退提交                       | `revert: 回退错误的组件更新`          |
+| `update`   | 更新依赖或配置                 | `update: 升级 TypeScript 到 5.0`      |
 
 ## 作用域 (scope) - 可选
 
@@ -49,7 +49,7 @@ update: 升级 Vue 到 3.4 版本
 
 - `core` - 核心逻辑
 - `vue` - Vue 适配器
-- `react` - React 适配器  
+- `react` - React 适配器
 - `theme` - 主题样式
 - `button` - 按钮组件
 - `input` - 输入框组件
@@ -57,6 +57,7 @@ update: 升级 Vue 到 3.4 版本
 - `deps` - 依赖更新
 
 示例：
+
 ```bash
 feat(button): 添加 loading 状态支持
 fix(vue): 修复组件 props 类型问题
@@ -71,6 +72,7 @@ docs(core): 更新核心 API 文档
 - 结尾不加句号
 
 ### ✅ 好的描述
+
 ```bash
 feat: 添加按钮组件的禁用状态
 fix: 修复主题切换时的样式闪烁
@@ -78,6 +80,7 @@ docs: 更新组件使用示例
 ```
 
 ### ❌ 不好的描述
+
 ```bash
 feat: button
 fix: bug
@@ -156,18 +159,21 @@ npm run lint:commit
 ## 常见错误
 
 ### 1. 类型拼写错误
+
 ```bash
 ❌ feat: 添加组件  # 缺少冒号后的空格
 ✅ feat: 添加组件
 ```
 
 ### 2. 描述过短
+
 ```bash
 ❌ fix: bug
 ✅ fix: 修复按钮点击无响应的问题
 ```
 
 ### 3. 使用了不规范的类型
+
 ```bash
 ❌ add: 添加新功能
 ✅ feat: 添加新功能
@@ -177,7 +183,7 @@ npm run lint:commit
 
 ```bash
 feat(button): 添加 loading 状态和 icon 支持
-fix(vue): 修复组件在 SSR 环境下的渲染问题  
+fix(vue): 修复组件在 SSR 环境下的渲染问题
 docs: 完善组件库使用文档和示例
 style: 统一代码格式，修复 ESLint 警告
 refactor(core): 重构事件系统，提升性能

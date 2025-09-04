@@ -7,7 +7,13 @@ export interface BaseComponentProps {
 }
 
 // 按钮组件类型
-export type ButtonType = 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger'
+export type ButtonType =
+  | 'default'
+  | 'primary'
+  | 'secondary'
+  | 'success'
+  | 'warning'
+  | 'danger'
 export type ButtonSize = 'small' | 'medium' | 'large'
 
 export interface ButtonProps extends BaseComponentProps {
@@ -20,7 +26,7 @@ export interface ButtonProps extends BaseComponentProps {
   children?: any
 }
 
-// 输入框组件类型  
+// 输入框组件类型
 export type InputType = 'text' | 'password' | 'email' | 'number' | 'tel' | 'url'
 export type InputSize = 'small' | 'medium' | 'large'
 

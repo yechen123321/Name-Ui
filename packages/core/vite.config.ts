@@ -7,20 +7,20 @@ export default defineConfig({
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'NameUICore',
       fileName: 'index',
-      formats: ['es']
+      formats: ['es'],
     },
     rollupOptions: {
       external: [],
       output: {
-        globals: {}
-      }
+        globals: {},
+      },
     },
     sourcemap: true,
-    minify: false
+    minify: false,
   },
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src')
-    }
-  }
+      '@': resolve(__dirname, 'src'),
+    },
+  },
 })

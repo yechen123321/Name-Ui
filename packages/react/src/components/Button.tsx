@@ -3,26 +3,27 @@ import { ButtonCore, type ButtonProps as CoreButtonProps } from '@name-ui/core'
 import './Button.css'
 
 // React 按钮组件属性接口
-export interface ButtonProps extends Omit<CoreButtonProps, 'children' | 'onClick'> {
+export interface ButtonProps
+  extends Omit<CoreButtonProps, 'children' | 'onClick'> {
   children?: React.ReactNode
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 
 // 加载中图标组件
 const LoadingIcon: React.FC = () => (
-  <span className="n-button__loading">
-    <svg className="n-button__spinner" viewBox="0 0 50 50">
+  <span className='n-button__loading'>
+    <svg className='n-button__spinner' viewBox='0 0 50 50'>
       <circle
-        className="n-button__spinner-path"
-        cx="25"
-        cy="25"
-        r="20"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeDasharray="31.416"
-        strokeDashoffset="31.416"
+        className='n-button__spinner-path'
+        cx='25'
+        cy='25'
+        r='20'
+        fill='none'
+        stroke='currentColor'
+        strokeWidth='2'
+        strokeLinecap='round'
+        strokeDasharray='31.416'
+        strokeDashoffset='31.416'
       />
     </svg>
   </span>
@@ -56,15 +57,27 @@ export const Button: React.FC<ButtonProps> = ({
       id,
       testId,
       children,
-      onClick: onClick as any
+      onClick: onClick as any,
     })
-  }, [type, size, disabled, loading, block, className, style, id, testId, children, onClick])
+  }, [
+    type,
+    size,
+    disabled,
+    loading,
+    block,
+    className,
+    style,
+    id,
+    testId,
+    children,
+    onClick,
+  ])
 
   // 处理点击事件
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     const nativeEvent = event.nativeEvent
     buttonCore.handleClick(nativeEvent)
-    
+
     if (buttonCore.isInteractive() && onClick) {
       onClick(event)
     }
@@ -80,9 +93,7 @@ export const Button: React.FC<ButtonProps> = ({
     >
       {loading && <LoadingIcon />}
       {(!loading || children) && (
-        <span className="n-button__content">
-          {children}
-        </span>
+        <span className='n-button__content'>{children}</span>
       )}
     </button>
   )

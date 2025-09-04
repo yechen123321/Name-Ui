@@ -3,7 +3,8 @@ import { InputCore, type InputProps as CoreInputProps } from '@name-ui/core'
 import './Input.css'
 
 // React 输入框组件属性接口
-export interface InputProps extends Omit<CoreInputProps, 'onChange' | 'onFocus' | 'onBlur'> {
+export interface InputProps
+  extends Omit<CoreInputProps, 'onChange' | 'onFocus' | 'onBlur'> {
   onChange?: (value: string, event: React.ChangeEvent<HTMLInputElement>) => void
   onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void
   onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void
@@ -28,7 +29,9 @@ export const Input: React.FC<InputProps> = ({
   ...rest
 }) => {
   // 内部状态管理
-  const [internalValue, setInternalValue] = useState(value !== undefined ? value : defaultValue)
+  const [internalValue, setInternalValue] = useState(
+    value !== undefined ? value : defaultValue
+  )
 
   // 当外部 value 改变时同步内部状态
   useEffect(() => {
@@ -53,7 +56,7 @@ export const Input: React.FC<InputProps> = ({
       testId,
       onChange: onChange as any,
       onFocus: onFocus as any,
-      onBlur: onBlur as any
+      onBlur: onBlur as any,
     })
   }, [
     type,
@@ -70,7 +73,7 @@ export const Input: React.FC<InputProps> = ({
     testId,
     onChange,
     onFocus,
-    onBlur
+    onBlur,
   ])
 
   // 处理输入事件
