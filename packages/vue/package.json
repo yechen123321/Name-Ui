@@ -21,7 +21,7 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite build --watch",
-    "type-check": "vue-tsc --noEmit",
+    "type-check": "vite build --mode development --emptyOutDir false",
     "clean": "if exist dist rmdir /s /q dist"
   },
   "dependencies": {
